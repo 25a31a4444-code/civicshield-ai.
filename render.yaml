@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: civicshield-ai
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn --pythonpath . app:app"
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: OTP_DEV_MODE
+        value: "true"
+      - key: OTP_DEV_CODE
+        value: "123456"

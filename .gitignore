@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.zip
+.env
+.DS_Store
+Thumbs.db
+*.db-shm
+*.db-wal
